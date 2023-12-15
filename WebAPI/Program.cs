@@ -14,9 +14,10 @@ app.MapGet("/", () => {
     strRotaPrincipal.AppendLine(Lorena.View());
     strRotaPrincipal.AppendLine(Daniel.ViewProfile());
     strRotaPrincipal.AppendLine(AlanPrates.ListarHabilidades());
+    strRotaPrincipal.AppendLine(Gabriel.View());
 
     // Soma geral da equipe
-    var totalGeral = Lorena.TotalEstrelas + Daniel.TotalEstrelas + AlanPrates.TotalEstrelas;
+    var totalGeral = Lorena.TotalEstrelas + Daniel.TotalEstrelas + AlanPrates.TotalEstrelas + Gabriel.TotalEstrelas;
     strRotaPrincipal.AppendLine();
     strRotaPrincipal.AppendLine($"Soma geral da equipe: {totalGeral}");
 
@@ -28,5 +29,7 @@ app.MapGet("/lorena/", () => Lorena.View());
 app.MapGet("/daniel/", () => Daniel.ViewProfile());
 
 app.MapGet("/alanprates", () => AlanPrates.ListarHabilidades());
+
+app.MapGet("/gabriel/", () => Gabriel.View());
 
 app.Run();
