@@ -8,6 +8,6 @@ string ListarHabilidadesAlanPrates()
     return AlanPrates.ListarHabilidades();
 }
 
-app.MapGet("/alan_prates", () => ListarHabilidadesAlanPrates());
+app.MapGet("/alanprates", () => ListarHabilidadesAlanPrates());
 
 app.Run();
