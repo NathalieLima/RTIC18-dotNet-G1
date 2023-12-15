@@ -3,11 +3,8 @@ using Semana1.Domain;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-string TesteSimples()
-{
-    return User.View();
-}
-
-app.MapGet("/", () => TesteSimples());
+app.MapGet("/", () => "Hello World!");
+app.MapGet("/user/", () => User.View());
+app.MapGet("/lorena/", () => Lorena.View());//Rota lorena
 
 app.Run();
