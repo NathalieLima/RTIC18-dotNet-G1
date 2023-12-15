@@ -16,8 +16,6 @@ string ListarHabilidadesAlanPrates()
 
 app.MapGet("/", () => Profiles());
 
-app.MapGet("/user/", () => AlanPrates.View());
-
 app.MapGet("/lorena/", () => Lorena.View());
 
 app.MapGet("/daniel/", () => Daniel.ViewProfile());
