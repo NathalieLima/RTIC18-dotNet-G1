@@ -10,4 +10,5 @@ string TesteSimples()
 
 app.MapGet("/", () => TesteSimples());
 
+app.MapGet("/daniel", () => Daniel.ViewProfile());
 app.Run();
