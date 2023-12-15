@@ -4,25 +4,24 @@ using ClassDaniel.Domain;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-<<<<<<< HEAD
-string Profiles(){
-
-    return User.View() + Lorena.View() + Daniel.ViewProfile();
+string Profiles()
+{
+    return AlanPrates.View() + Lorena.View() + Daniel.ViewProfile();
 }
 
-app.MapGet("/", () => Profiles());
-app.MapGet("/user/", () => User.View());
-
-app.MapGet("/lorena/", () => Lorena.View());//Rota lorena
-app.MapGet("/daniel/", () => Daniel.ViewProfile());
-app.Run();
-=======
 string ListarHabilidadesAlanPrates()
 {
     return AlanPrates.ListarHabilidades();
 }
 
+app.MapGet("/", () => Profiles());
+
+app.MapGet("/user/", () => AlanPrates.View());
+
+app.MapGet("/lorena/", () => Lorena.View());
+
+app.MapGet("/daniel/", () => Daniel.ViewProfile());
+
 app.MapGet("/alanprates", () => ListarHabilidadesAlanPrates());
 
 app.Run();
->>>>>>> DOTNET-P002/03-Alan_Prates

@@ -31,5 +31,10 @@ namespace Semana1.Domain
                   sb.AppendLine($"Total de estrelas: {sum}");
                   return sb.ToString();
             }
-      }
+
+        public static object View()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
