@@ -5,6 +5,6 @@ var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 app.MapGet("/user/", () => User.View());
-app.MapGet("/lorena/", () => Lorena.View());
+app.MapGet("/lorena/", () => Lorena.View());//Rota lorena
 
 app.Run();
