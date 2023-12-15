@@ -3,11 +3,11 @@ using Semana1.Domain;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-string TesteSimples()
+string ListarHabilidadesAlanPrates()
 {
-    return User.View();
+    return AlanPrates.ListarHabilidades();
 }
 
-app.MapGet("/", () => TesteSimples());
+app.MapGet("/alan_prates", () => ListarHabilidadesAlanPrates());
 
 app.Run();
