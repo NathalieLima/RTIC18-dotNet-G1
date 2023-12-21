@@ -20,13 +20,14 @@ public class UsersController : ControllerBase
     public async Task<ActionResult<CreateUserResponse>> Create(CreateUserRequest request,
                                                          CancellationToken cancellationToken)
     {
-        var validator = new CreateUserValidator();
-        var validationResult = await validator.ValidateAsync(request);
+        //Vai utilizar ValidationBehavior
+        // var validator = new CreateUserValidator();
+        // var validationResult = await validator.ValidateAsync(request);
 
-        if (!validationResult.IsValid)
-        {
-           return BadRequest(validationResult.Errors);
-        }
+        // if (!validationResult.IsValid)
+        // {
+        //    return BadRequest(validationResult.Errors);
+        // }
         
         var response = await _mediator.Send(request, cancellationToken);
 
