@@ -1,13 +1,16 @@
+﻿using CleanArchitecture.Application.UseCases.CreateUser;
+using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CleanArchitecture.WebAPI.Controllers
+namespace CleanArchitecture.API
 {
-    [Route("api/[controller]")]
+    [Route("api/[Controller]")]
     [ApiController]
-
-    public class Users Controller : ControllerBase
+    public class UsersController : ControllerBase
     {
-        private readonly IMediator _mediator;
+        private readonly  IMediator _mediator;
+
         public UsersController(IMediator mediator)
         {
             _mediator = mediator;
@@ -17,7 +20,7 @@ namespace CleanArchitecture.WebAPI.Controllers
         public async Task<ActionResult<CreateUserResponse>> Create(CreateUserRequest request, CancellationToken cancellationToken)
         {
             var validator = new CreateUserValidator();
-            var validationResult = await validator.ValidateAsync(request);
+            var validationResult  = await validator.ValidateAsync(request);
 
             if(!validationResult.IsValid)
             {
@@ -28,4 +31,9 @@ namespace CleanArchitecture.WebAPI.Controllers
             return Ok(response);
         }
     }
+}
+
+public class UsersController
+{
+
 }
