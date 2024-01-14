@@ -1,23 +1,35 @@
+using System;
+using CleanArchitecture.Persistence;
+using CleanArchitecture.Persistence.Context;
+using CleanArchitecture.Application.Services;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.ConfigurePersistenceApp(builder.Configuration);
+builder.Services.ConfigureApplicationApp();
+
+
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+CreateDatabase(app);
+
+app.UseSwagger();
+app.UseSwaggerUI();
+
+app.UseCors();
+app.MapControllers();
+app.Run();
+
+static void CreateDatabase(WebApplication app)
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    var serviceScope = app.Services.CreateScope();
+    var dataContext = serviceScope.ServiceProvider.GetService<AppDbContext>();
+    dataContext?.Database.EnsureCreated();
 }
 
-app.UseHttpsRedirection();
-
-
-
-
-//configurando as rotas
-app.Run();
