@@ -32,8 +32,3 @@ namespace CleanArchitecture.API.Controllers
         }
     }
 }
-
-public class UsersController
-{
-
-}
