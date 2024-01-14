@@ -5,9 +5,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Shared/" />
-    <Folder Include="Shared/Behavior/" />
-    <Folder Include="Shared/Exceptions/" />
+    <Folder Include="Shared\Exceptions\" />
     <Folder Include="UseCases/DeleteUser/" />
     <Folder Include="UseCases/GetAllUser/" />
     <Folder Include="UseCases/UpdateUser/" />
