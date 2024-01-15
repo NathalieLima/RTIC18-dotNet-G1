@@ -1,10 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\CleanArchitecture.Dommain\CleanArchitecture.Domain.csproj" />
+    <ProjectReference Include="..\Domain\CleanArchitecture.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Services/" />
     <Folder Include="Shared/" />
     <Folder Include="Shared/Behavior/" />
     <Folder Include="Shared/Exceptions/" />
@@ -15,8 +16,8 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
-    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.8.1" />
-    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
   </ItemGroup>
 
   <PropertyGroup>
