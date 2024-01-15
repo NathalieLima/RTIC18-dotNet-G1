@@ -1,9 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "qtp6voqbBgT50pT9ctQhT0ntrYOeWhZ+lGFdRiUXQ+41zxfbqQxSH00L41GW0yRzkR/dQK6o13zsEn5sS3r1wg==",
+  "dgSpecHash": "sy7n6LvEy0dr1W3axO3g+b/COD6BnIPikKYoYCZAcWpvg07PKeZmulyHYh3UZyXih2iHd3Y9r1sjp6lEq2kkcg==",
   "success": true,
   "projectFilePath": "/home/nathalielima/RTIC18_repo-grupo/Infrastructure/Persistence/Persistence.csproj",
   "expectedPackageFiles": [
+    "/home/nathalielima/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/fluentvalidation/11.7.1/fluentvalidation.11.7.1.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.7.1/fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/mediatr/12.1.1/mediatr.12.1.1.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/nathalielima/.nuget/packages/microsoft.data.sqlite.core/7.0.14/microsoft.data.sqlite.core.7.0.14.nupkg.sha512",
     "/home/nathalielima/.nuget/packages/microsoft.entityframeworkcore/7.0.14/microsoft.entityframeworkcore.7.0.14.nupkg.sha512",
     "/home/nathalielima/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.14/microsoft.entityframeworkcore.abstractions.7.0.14.nupkg.sha512",

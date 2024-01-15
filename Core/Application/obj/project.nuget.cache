@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "yuEMnArDH4r0dZLUrQMiDdmN7Ke1SggeO/U4avoa0FZvtdJPFKabM83xCVYCTpd/cWS1GDGRcx2s+5qdJWoz1w==",
+  "dgSpecHash": "kfGrz6c3sA2ug7cr8w35FeXor8v4tp5V6qzx1tmoF1ivTdT6U4Sy5wJf69p4cb1OrCbJ3aXinqy/Lbkzagmd8Q==",
   "success": true,
   "projectFilePath": "/home/nathalielima/RTIC18_repo-grupo/Core/Application/Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/nathalielima/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/fluentvalidation/11.7.1/fluentvalidation.11.7.1.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.7.1/fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/mediatr/12.1.1/mediatr.12.1.1.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/home/nathalielima/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
