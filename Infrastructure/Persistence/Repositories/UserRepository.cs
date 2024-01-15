@@ -1,4 +1,6 @@
+
 ﻿using CleanArchitecture.Domain.Entities;
+
 using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.Persistence.Context;
 using Microsoft.EntityFrameworkCore;

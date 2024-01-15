@@ -1,4 +1,5 @@
-﻿using CleanArchitecture.Domain.Interfaces;
+
+using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.Persistence.Context;
 using CleanArchitecture.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -9,7 +10,9 @@ namespace CleanArchitecture.Persistence;
 
 public static class ServiceExtensions
 {
-    public static void ConfigurePersistenceApp(this IServiceCollection services, IConfiguration configuration)
+
+    public static void ConfigurePersistenceApp(this IServiceCollection services,
+                                                IConfiguration configuration)
     {
         var connectionString = configuration.GetConnectionString("Sqlite");
         services.AddDbContext<AppDbContext>(opt => opt.UseSqlite(connectionString));
