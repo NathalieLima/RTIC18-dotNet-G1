@@ -469,19 +469,19 @@
     ]
   },
   "packageFolders": {
-    "/home/nathalielima/.nuget/packages/": {}
+    "C:\\Users\\gabri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/nathalielima/RTIC18_repo-grupo/Presentation/API/API.csproj",
+      "projectUniqueName": "F:\\.NET\\RTIC18-dotNet-G1\\Presentation\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "/home/nathalielima/RTIC18_repo-grupo/Presentation/API/API.csproj",
-      "packagesPath": "/home/nathalielima/.nuget/packages/",
-      "outputPath": "/home/nathalielima/RTIC18_repo-grupo/Presentation/API/obj/",
+      "projectPath": "F:\\.NET\\RTIC18-dotNet-G1\\Presentation\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
+      "outputPath": "F:\\.NET\\RTIC18-dotNet-G1\\Presentation\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/nathalielima/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -533,7 +533,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }
