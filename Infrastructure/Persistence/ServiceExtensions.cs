@@ -1,3 +1,4 @@
+
 using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.Persistence.Context;
 using CleanArchitecture.Persistence.Repositories;
@@ -9,6 +10,7 @@ namespace CleanArchitecture.Persistence;
 
 public static class ServiceExtensions
 {
+
     public static void ConfigurePersistenceApp(this IServiceCollection services,
                                                 IConfiguration configuration)
     {
@@ -17,6 +19,5 @@ public static class ServiceExtensions
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IUserRepository, UserRepository>();
-
     }
 }

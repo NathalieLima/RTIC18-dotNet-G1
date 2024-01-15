@@ -1,3 +1,4 @@
+
 using CleanArchitecture.Domain.Entities;
 using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.Persistence.Context;
@@ -8,9 +9,8 @@ namespace CleanArchitecture.Persistence.Repositories;
 public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
 {
     protected readonly AppDbContext Context;
-
-    public BaseRepository(AppDbContext context)
-    {
+    
+    public BaseRepository(AppDbContext context){
         Context = context;
     }
 
@@ -41,4 +41,5 @@ public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
         return await Context.Set<T>().ToListAsync(cancellationToken);
     }
+
 }
