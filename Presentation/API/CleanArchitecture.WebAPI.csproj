@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Infrastructure\Persistence\Persistence.csproj" />
-    <ProjectReference Include="..\..\Core\Application\Application.csproj" />
+    <ProjectReference Include="../../Core/Application/CleanArchitecture.Application.csproj" />
+    <ProjectReference Include="../../Infrastructure/Persistence/CleanArchitecture.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

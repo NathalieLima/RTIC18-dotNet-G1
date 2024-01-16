@@ -4,6 +4,193 @@
     "/home/nathalielima/teste1/RTIC18-dotNet-G1/Presentation/API/CleanArchitecture.WebAPI.csproj": {}
   },
   "projects": {
+    "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj",
+        "projectName": "CleanArchitecture.Application",
+        "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj",
+        "packagesPath": "/home/nathalielima/.nuget/packages/",
+        "outputPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/nathalielima/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/CleanArchitecture.Domain.csproj": {
+                "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/CleanArchitecture.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.7.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/CleanArchitecture.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/CleanArchitecture.Domain.csproj",
+        "projectName": "CleanArchitecture.Domain",
+        "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/CleanArchitecture.Domain.csproj",
+        "packagesPath": "/home/nathalielima/.nuget/packages/",
+        "outputPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/nathalielima/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/CleanArchitecture.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/CleanArchitecture.Persistence.csproj",
+        "projectName": "CleanArchitecture.Persistence",
+        "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/CleanArchitecture.Persistence.csproj",
+        "packagesPath": "/home/nathalielima/.nuget/packages/",
+        "outputPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/nathalielima/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj": {
+                "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/home/nathalielima/teste1/RTIC18-dotNet-G1/Presentation/API/CleanArchitecture.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -25,7 +212,14 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj": {
+                "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj"
+              },
+              "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/CleanArchitecture.Persistence.csproj": {
+                "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/CleanArchitecture.Persistence.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

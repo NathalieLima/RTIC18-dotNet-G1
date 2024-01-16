@@ -4,12 +4,12 @@
     "/home/nathalielima/teste1/RTIC18-dotNet-G1/Presentation/API/API.csproj": {}
   },
   "projects": {
-    "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/Application.csproj": {
+    "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/Application.csproj",
-        "projectName": "Application",
-        "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/Application.csproj",
+        "projectUniqueName": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj",
+        "projectName": "CleanArchitecture.Application",
+        "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj",
         "packagesPath": "/home/nathalielima/.nuget/packages/",
         "outputPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/obj/",
         "projectStyle": "PackageReference",
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/Domain.csproj": {
-                "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/Domain.csproj"
+              "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/CleanArchitecture.Domain.csproj": {
+                "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/CleanArchitecture.Domain.csproj"
               }
             }
           }
@@ -75,12 +75,12 @@
         }
       }
     },
-    "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/Domain.csproj": {
+    "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/CleanArchitecture.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/Domain.csproj",
+        "projectUniqueName": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/CleanArchitecture.Domain.csproj",
+        "projectName": "CleanArchitecture.Domain",
+        "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/CleanArchitecture.Domain.csproj",
         "packagesPath": "/home/nathalielima/.nuget/packages/",
         "outputPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/obj/",
         "projectStyle": "PackageReference",
@@ -150,8 +150,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/Application.csproj": {
-                "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/Application.csproj"
+              "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj": {
+                "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj"
               }
             }
           }
@@ -213,8 +213,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/Application.csproj": {
-                "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/Application.csproj"
+              "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj": {
+                "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj"
               },
               "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/Persistence.csproj": {
                 "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/Persistence.csproj"

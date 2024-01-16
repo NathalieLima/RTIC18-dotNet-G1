@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "bUm1vPqwZHJejLhtNIB7WgmMI8ngxypkYrDApg4MvgQ=",
-  "Source": "API",
-  "BasePath": "_content/API",
+  "Hash": "92VeEv5CZ/CJuYNa7+8oPFOIVjfXDk1DyvTofwpkx/w=",
+  "Source": "CleanArchitecture.WebAPI",
+  "BasePath": "_content/CleanArchitecture.WebAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

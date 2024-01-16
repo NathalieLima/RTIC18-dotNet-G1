@@ -698,44 +698,44 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
-      "Application/1.0.0": {
+      "CleanArchitecture.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "Domain": "1.0.0",
+          "CleanArchitecture.Domain": "1.0.0",
           "FluentValidation.DependencyInjectionExtensions": "11.7.1",
           "MediatR": "12.1.1"
         },
         "compile": {
-          "bin/placeholder/Application.dll": {}
+          "bin/placeholder/CleanArchitecture.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Application.dll": {}
+          "bin/placeholder/CleanArchitecture.Application.dll": {}
         }
       },
-      "Domain/1.0.0": {
+      "CleanArchitecture.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "compile": {
-          "bin/placeholder/Domain.dll": {}
+          "bin/placeholder/CleanArchitecture.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Domain.dll": {}
+          "bin/placeholder/CleanArchitecture.Domain.dll": {}
         }
       },
-      "Persistence/1.0.0": {
+      "CleanArchitecture.Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Application": "1.0.0",
+          "CleanArchitecture.Application": "1.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.14"
         },
         "compile": {
-          "bin/placeholder/Persistence.dll": {}
+          "bin/placeholder/CleanArchitecture.Persistence.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Persistence.dll": {}
+          "bin/placeholder/CleanArchitecture.Persistence.dll": {}
         }
       }
     }
@@ -1894,27 +1894,27 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Application/1.0.0": {
+    "CleanArchitecture.Application/1.0.0": {
       "type": "project",
-      "path": "../../Core/Application/Application.csproj",
-      "msbuildProject": "../../Core/Application/Application.csproj"
+      "path": "../../Core/Application/CleanArchitecture.Application.csproj",
+      "msbuildProject": "../../Core/Application/CleanArchitecture.Application.csproj"
     },
-    "Domain/1.0.0": {
+    "CleanArchitecture.Domain/1.0.0": {
       "type": "project",
-      "path": "../../Core/Domain/Domain.csproj",
-      "msbuildProject": "../../Core/Domain/Domain.csproj"
+      "path": "../../Core/Domain/CleanArchitecture.Domain.csproj",
+      "msbuildProject": "../../Core/Domain/CleanArchitecture.Domain.csproj"
     },
-    "Persistence/1.0.0": {
+    "CleanArchitecture.Persistence/1.0.0": {
       "type": "project",
-      "path": "../../Infrastructure/Persistence/Persistence.csproj",
-      "msbuildProject": "../../Infrastructure/Persistence/Persistence.csproj"
+      "path": "../../Infrastructure/Persistence/CleanArchitecture.Persistence.csproj",
+      "msbuildProject": "../../Infrastructure/Persistence/CleanArchitecture.Persistence.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Application >= 1.0.0",
+      "CleanArchitecture.Application >= 1.0.0",
+      "CleanArchitecture.Persistence >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.15",
-      "Persistence >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -1924,9 +1924,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Presentation/API/API.csproj",
-      "projectName": "API",
-      "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Presentation/API/API.csproj",
+      "projectUniqueName": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Presentation/API/CleanArchitecture.WebAPI.csproj",
+      "projectName": "CleanArchitecture.WebAPI",
+      "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Presentation/API/CleanArchitecture.WebAPI.csproj",
       "packagesPath": "/home/nathalielima/.nuget/packages/",
       "outputPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Presentation/API/obj/",
       "projectStyle": "PackageReference",
@@ -1943,11 +1943,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/Application.csproj": {
-              "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/Application.csproj"
+            "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj": {
+              "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/CleanArchitecture.Application.csproj"
             },
-            "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/Persistence.csproj": {
-              "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/Persistence.csproj"
+            "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/CleanArchitecture.Persistence.csproj": {
+              "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/CleanArchitecture.Persistence.csproj"
             }
           }
         }
