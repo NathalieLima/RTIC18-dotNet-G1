@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/nathalielima/RTIC18_repo-grupo/Core/Domain/Domain.csproj": {}
+    "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/Domain.csproj": {}
   },
   "projects": {
-    "/home/nathalielima/RTIC18_repo-grupo/Core/Domain/Domain.csproj": {
+    "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nathalielima/RTIC18_repo-grupo/Core/Domain/Domain.csproj",
+        "projectUniqueName": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/home/nathalielima/RTIC18_repo-grupo/Core/Domain/Domain.csproj",
+        "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/Domain.csproj",
         "packagesPath": "/home/nathalielima/.nuget/packages/",
-        "outputPath": "/home/nathalielima/RTIC18_repo-grupo/Core/Domain/obj/",
+        "outputPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/nathalielima/.nuget/NuGet/NuGet.Config"

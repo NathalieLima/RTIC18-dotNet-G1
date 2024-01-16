@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/nathalielima/RTIC18_repo-grupo/Infrastructure/Persistence/Persistence.csproj": {}
+    "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/Persistence.csproj": {}
   },
   "projects": {
-    "/home/nathalielima/RTIC18_repo-grupo/Core/Application/Application.csproj": {
+    "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nathalielima/RTIC18_repo-grupo/Core/Application/Application.csproj",
+        "projectUniqueName": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "/home/nathalielima/RTIC18_repo-grupo/Core/Application/Application.csproj",
+        "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/Application.csproj",
         "packagesPath": "/home/nathalielima/.nuget/packages/",
-        "outputPath": "/home/nathalielima/RTIC18_repo-grupo/Core/Application/obj/",
+        "outputPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/nathalielima/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/nathalielima/RTIC18_repo-grupo/Core/Domain/Domain.csproj": {
-                "projectPath": "/home/nathalielima/RTIC18_repo-grupo/Core/Domain/Domain.csproj"
+              "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/Domain.csproj": {
+                "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/Domain.csproj"
               }
             }
           }
@@ -75,14 +75,14 @@
         }
       }
     },
-    "/home/nathalielima/RTIC18_repo-grupo/Core/Domain/Domain.csproj": {
+    "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nathalielima/RTIC18_repo-grupo/Core/Domain/Domain.csproj",
+        "projectUniqueName": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/home/nathalielima/RTIC18_repo-grupo/Core/Domain/Domain.csproj",
+        "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/Domain.csproj",
         "packagesPath": "/home/nathalielima/.nuget/packages/",
-        "outputPath": "/home/nathalielima/RTIC18_repo-grupo/Core/Domain/obj/",
+        "outputPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/nathalielima/.nuget/NuGet/NuGet.Config"
@@ -128,14 +128,14 @@
         }
       }
     },
-    "/home/nathalielima/RTIC18_repo-grupo/Infrastructure/Persistence/Persistence.csproj": {
+    "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nathalielima/RTIC18_repo-grupo/Infrastructure/Persistence/Persistence.csproj",
+        "projectUniqueName": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "/home/nathalielima/RTIC18_repo-grupo/Infrastructure/Persistence/Persistence.csproj",
+        "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/Persistence.csproj",
         "packagesPath": "/home/nathalielima/.nuget/packages/",
-        "outputPath": "/home/nathalielima/RTIC18_repo-grupo/Infrastructure/Persistence/obj/",
+        "outputPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/nathalielima/.nuget/NuGet/NuGet.Config"
@@ -150,8 +150,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/nathalielima/RTIC18_repo-grupo/Core/Application/Application.csproj": {
-                "projectPath": "/home/nathalielima/RTIC18_repo-grupo/Core/Application/Application.csproj"
+              "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/Application.csproj": {
+                "projectPath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/Application.csproj"
               }
             }
           }

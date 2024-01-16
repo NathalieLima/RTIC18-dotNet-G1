@@ -1,0 +1,17 @@
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/bin/Debug/net7.0/Persistence.deps.json
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/bin/Debug/net7.0/Persistence.dll
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/bin/Debug/net7.0/Persistence.pdb
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/bin/Debug/net7.0/Application.dll
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/bin/Debug/net7.0/Domain.dll
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/bin/Debug/net7.0/Application.pdb
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/bin/Debug/net7.0/Domain.pdb
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.csproj.AssemblyReference.cache
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.AssemblyInfoInputs.cache
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.AssemblyInfo.cs
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.csproj.CoreCompileInputs.cache
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.csproj.CopyComplete
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.dll
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/obj/Debug/net7.0/refint/Persistence.dll
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.pdb
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Infrastructure/Persistence/obj/Debug/net7.0/ref/Persistence.dll

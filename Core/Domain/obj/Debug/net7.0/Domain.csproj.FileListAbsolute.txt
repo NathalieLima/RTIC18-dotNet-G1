@@ -1,0 +1,12 @@
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/bin/Debug/net7.0/Domain.deps.json
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/bin/Debug/net7.0/Domain.dll
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/bin/Debug/net7.0/Domain.pdb
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/obj/Debug/net7.0/Domain.csproj.AssemblyReference.cache
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/obj/Debug/net7.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/obj/Debug/net7.0/Domain.AssemblyInfoInputs.cache
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/obj/Debug/net7.0/Domain.AssemblyInfo.cs
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/obj/Debug/net7.0/Domain.csproj.CoreCompileInputs.cache
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/obj/Debug/net7.0/Domain.dll
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/obj/Debug/net7.0/refint/Domain.dll
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/obj/Debug/net7.0/Domain.pdb
+/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Domain/obj/Debug/net7.0/ref/Domain.dll

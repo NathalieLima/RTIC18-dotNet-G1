@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kfGrz6c3sA2ug7cr8w35FeXor8v4tp5V6qzx1tmoF1ivTdT6U4Sy5wJf69p4cb1OrCbJ3aXinqy/Lbkzagmd8Q==",
+  "dgSpecHash": "/oeFPvN5OcKQVJTaC6xararP1ky/VhHzb5XrP+ztZ5Kys7UOys/8CTfwGCH3bbTI9gSjti1Or9PTM+2/yPrfMQ==",
   "success": true,
-  "projectFilePath": "/home/nathalielima/RTIC18_repo-grupo/Core/Application/Application.csproj",
+  "projectFilePath": "/home/nathalielima/teste1/RTIC18-dotNet-G1/Core/Application/Application.csproj",
   "expectedPackageFiles": [
     "/home/nathalielima/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/home/nathalielima/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
