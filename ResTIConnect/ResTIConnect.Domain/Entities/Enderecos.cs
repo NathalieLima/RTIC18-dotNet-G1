@@ -2,7 +2,7 @@
 
 namespace ResTIConnect.Domain.Entities
 {
-    public class Endereco
+    public class Enderecos
     {
         public int EnderecoId { get; }
         public required string  Logradouro { get; set; }

@@ -2,7 +2,7 @@
 
 namespace ResTIConnect.Domain.Entities
 {
-    public class Perfil
+    public class Perfis
     {
         public int PerfilId { get; }
         public required string  Descricao { get; set; }
