@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "/home/nathalielima/.nuget/packages/": {}
+    "C:\\Users\\gabri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/nathalielima/RTIC18_repo-grupo/Core/Application/Application.csproj",
+      "projectUniqueName": "F:\\.NET\\RTIC18-dotNet-G1\\Core\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "/home/nathalielima/RTIC18_repo-grupo/Core/Application/Application.csproj",
-      "packagesPath": "/home/nathalielima/.nuget/packages/",
-      "outputPath": "/home/nathalielima/RTIC18_repo-grupo/Core/Application/obj/",
+      "projectPath": "F:\\.NET\\RTIC18-dotNet-G1\\Core\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
+      "outputPath": "F:\\.NET\\RTIC18-dotNet-G1\\Core\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/nathalielima/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -51,8 +51,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/home/nathalielima/RTIC18_repo-grupo/Core/Domain/Domain.csproj": {
-              "projectPath": "/home/nathalielima/RTIC18_repo-grupo/Core/Domain/Domain.csproj"
+            "F:\\.NET\\RTIC18-dotNet-G1\\Core\\Domain\\Domain.csproj": {
+              "projectPath": "F:\\.NET\\RTIC18-dotNet-G1\\Core\\Domain\\Domain.csproj"
             }
           }
         }
@@ -82,7 +82,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

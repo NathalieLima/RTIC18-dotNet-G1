@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yuEMnArDH4r0dZLUrQMiDdmN7Ke1SggeO/U4avoa0FZvtdJPFKabM83xCVYCTpd/cWS1GDGRcx2s+5qdJWoz1w==",
+  "dgSpecHash": "AYToCOLRAYx5Bmy9I9ofVCKXrepVf9+tH4/Ozjyx9RhtGaMnFUhaoLhqx+NOE4gCFSm4RkvMfzLa0efn1gYf0A==",
   "success": true,
-  "projectFilePath": "/home/nathalielima/RTIC18_repo-grupo/Core/Application/Application.csproj",
+  "projectFilePath": "F:\\.NET\\RTIC18-dotNet-G1\\Core\\Application\\Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

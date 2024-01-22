@@ -1,4 +1,4 @@
-﻿using MediatR;
+using MediatR;
 
 namespace CleanArchitecture.Application.UseCases.CreateUser
 {
