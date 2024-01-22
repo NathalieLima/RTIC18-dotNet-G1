@@ -11,8 +11,8 @@ using ResTIConnect.Infra.Data.Context;
 namespace ResTIConnect.Infra.Data.Migrations
 {
     [DbContext(typeof(ResTIConnectContext))]
-    [Migration("20240122225025_CreatUser")]
-    partial class CreatUser
+    [Migration("20240122231936_CreatPerfiseEndereco")]
+    partial class CreatPerfiseEndereco
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -109,35 +109,6 @@ namespace ResTIConnect.Infra.Data.Migrations
                     b.HasKey("PerfilId");
 
                     b.ToTable("Perfis", (string)null);
-                });
-
-            modelBuilder.Entity("ResTIConnect.Domain.Entities.User", b =>
-                {
-                    b.Property<int>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("varchar(250)");
-
-                    b.Property<string>("Name")
-                        .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("Telefone")
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
-
-                    b.HasKey("UserId");
-
-                    b.ToTable("Users", (string)null);
                 });
 #pragma warning restore 612, 618
         }
