@@ -9,6 +9,7 @@ namespace ResTIConnect.Infra.Data.Context
     public class ResTIConnectContext : DbContext
     {
         public DbSet<Logs> Logs { get; set; }
+        public DbSet<User> Users { get; set; }
 
          protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
          {
@@ -27,6 +28,12 @@ namespace ResTIConnect.Infra.Data.Context
             modelBuilder.Entity<Logs>().Property(m => m.DataHoraEvento);
             modelBuilder.Entity<Logs>().Property(m => m.Entidade);
             modelBuilder.Entity<Logs>().Property(m => m.TuplaId);
+
+            modelBuilder.Entity<User>().ToTable("Users").HasKey(m => m.UserId);
+            modelBuilder.Entity<User>().Property(m => m.Name).HasMaxLength(100);
+            modelBuilder.Entity<User>().Property(m => m.Email).IsRequired().HasMaxLength(250);
+            modelBuilder.Entity<User>().Property(m => m.Password).IsRequired().HasMaxLength(255);
+            modelBuilder.Entity<User>().Property(m => m.Telefone).HasMaxLength(20);
 
             base.OnModelCreating(modelBuilder);
         }
