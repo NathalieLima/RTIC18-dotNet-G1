@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ResTIConnect.Infra.Data.Context;
 
@@ -10,9 +11,11 @@ using ResTIConnect.Infra.Data.Context;
 namespace ResTIConnect.Infra.Data.Migrations
 {
     [DbContext(typeof(ResTIConnectContext))]
-    partial class ResTIConnectContextModelSnapshot : ModelSnapshot
+    [Migration("20240122225025_CreatUser")]
+    partial class CreatUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
