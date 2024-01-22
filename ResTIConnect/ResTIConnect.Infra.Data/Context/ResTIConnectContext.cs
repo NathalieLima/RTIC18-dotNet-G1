@@ -9,8 +9,12 @@ namespace ResTIConnect.Infra.Data.Context
     public class ResTIConnectContext : DbContext
     {
         public DbSet<Logs> Logs { get; set; }
+
+        public DbSet<User> Users { get; set; }
+
         public DbSet<Perfis> Perfis { get; set; }
         public DbSet<Enderecos> Enderecos { get; set; }
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -30,6 +34,12 @@ namespace ResTIConnect.Infra.Data.Context
             modelBuilder.Entity<Logs>().Property(m => m.Entidade);
             modelBuilder.Entity<Logs>().Property(m => m.TuplaId);
 
+            modelBuilder.Entity<User>().ToTable("Users").HasKey(m => m.UserId);
+            modelBuilder.Entity<User>().Property(m => m.Name).HasMaxLength(100);
+            modelBuilder.Entity<User>().Property(m => m.Email).IsRequired().HasMaxLength(250);
+            modelBuilder.Entity<User>().Property(m => m.Password).IsRequired().HasMaxLength(255);
+            modelBuilder.Entity<User>().Property(m => m.Telefone).HasMaxLength(20);
+            
             modelBuilder.Entity<Enderecos>().ToTable("Enderecos").HasKey(m => m.EnderecoId);
             modelBuilder.Entity<Enderecos>().Property(m => m.Logradouro).IsRequired();
             modelBuilder.Entity<Enderecos>().Property(m => m.Numero).IsRequired();
@@ -43,6 +53,7 @@ namespace ResTIConnect.Infra.Data.Context
             modelBuilder.Entity<Perfis>().ToTable("Perfis").HasKey(m => m.PerfilId);
             modelBuilder.Entity<Perfis>().Property(m => m.Descricao).IsRequired();
             modelBuilder.Entity<Perfis>().Property(m => m.Permissoes).IsRequired();
+
             base.OnModelCreating(modelBuilder);
         }
     }
