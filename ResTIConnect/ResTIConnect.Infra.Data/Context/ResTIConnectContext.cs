@@ -9,13 +9,11 @@ namespace ResTIConnect.Infra.Data.Context
     public class ResTIConnectContext : DbContext
     {
         public DbSet<Logs> Logs { get; set; }
-
         public DbSet<User> Users { get; set; }
-
         public DbSet<Perfis> Perfis { get; set; }
         public DbSet<Enderecos> Enderecos { get; set; }
-        
         public DbSet<Evento> Eventos { get; set; }
+        public DbSet<Sistemas> Sistemas {get; set;}
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
@@ -53,6 +51,9 @@ namespace ResTIConnect.Infra.Data.Context
             modelBuilder.Entity<Perfis>().ToTable("Perfis").HasKey(m => m.PerfilId);
             modelBuilder.Entity<Perfis>().Property(m => m.Descricao).IsRequired();
             modelBuilder.Entity<Perfis>().Property(m => m.Permissoes).IsRequired();
+
+            modelBuilder.Entity<Sistemas>().ToTable("Sistemas").HasKey(s => s.SistemaId);
+            modelBuilder.Entity<Sistemas>().Property(s => s.Descricao).IsRequired();
 
             base.OnModelCreating(modelBuilder);
         }
