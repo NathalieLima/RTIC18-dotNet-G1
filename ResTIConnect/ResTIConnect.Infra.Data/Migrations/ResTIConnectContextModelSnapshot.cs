@@ -61,6 +61,36 @@ namespace ResTIConnect.Infra.Data.Migrations
                     b.ToTable("Enderecos", (string)null);
                 });
 
+            modelBuilder.Entity("ResTIConnect.Domain.Entities.Evento", b =>
+                {
+                    b.Property<int>("EventoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Codigo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Conteudo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTimeOffset>("DataHoraOcorrencia")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Tipo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("EventoId");
+
+                    b.ToTable("Eventos");
+                });
+
             modelBuilder.Entity("ResTIConnect.Domain.Entities.Logs", b =>
                 {
                     b.Property<int>("LogId")
