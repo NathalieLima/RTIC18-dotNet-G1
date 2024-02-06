@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ResTIConnect.Application.Services
 {
-    public class EnderecoService
+    public class EnderecoService : IEnderecoService
     {
         
     }
