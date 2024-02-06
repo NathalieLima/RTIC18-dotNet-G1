@@ -15,6 +15,6 @@ namespace ResTIConnect.Application.ViewModels
         public string? Conteudo { get; set; }
         public DateTimeOffset DataHoraOcorrencia { get; set; }
 
-        public SistemaViewModel Sistema { get; set; }
+        public SistemaViewModel? Sistema { get; set; }
     }
 }
