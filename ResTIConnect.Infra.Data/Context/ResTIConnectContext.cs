@@ -13,6 +13,7 @@ namespace ResTIConnect.Infra.Data.Context
         public DbSet<Perfis> Perfis { get; set; }
         public DbSet<Enderecos> Enderecos { get; set; }
         public DbSet<Eventos> Eventos { get; set; }
+        public DbSet<Sistemas> Sistemas { get; set; }
 
         public ResTIConnectContext(DbContextOptions<ResTIConnectContext> options) : base(options)
         {
