@@ -1,0 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace ResTIConnect.Application
+{
+    public class NewUserInputModel
+    {
+        public string? Name { get; set; }
+        public int EnderecoId { get; set; }
+        public int PerfilId { get; set; }
+        public int SistemaId { get; set; }
+    }
+}
