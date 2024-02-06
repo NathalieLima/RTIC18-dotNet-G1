@@ -15,7 +15,8 @@ namespace ResTIConnect.Infra.Data.Context
         public DbSet<Perfis> Perfis { get; set; }
         public DbSet<Enderecos> Enderecos { get; set; }
         
-        public DbSet<Evento> Eventos { get; set; }
+        public DbSet<Eventos
+        > Eventos { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
