@@ -10,6 +10,7 @@ using ResTIConnect.Infra.Data.Context;
 using ResTIConnect.Domain.Entities;
 using ResTIConnect.Domain.Exceptions;
 
+
 namespace ResTIConnect.Application.Services
 {
     public class UserService : IUserService
