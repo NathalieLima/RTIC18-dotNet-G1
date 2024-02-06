@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ResTIConnect.Domain.Entities;
-
 namespace ResTIConnect.Infra.Data.Configurations
 {
     public class UsersConfigurations : IEntityTypeConfiguration<User>
