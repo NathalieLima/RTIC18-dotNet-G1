@@ -19,18 +19,6 @@ namespace ResTIConnect.Infra.Data.Configurations
             builder.Property(e => e.Logradouro)
                 .IsRequired();
 
-            builder.Property(e => e.Numero)
-                .IsRequired();
-                
-            builder.Property(e => e.Cidade)
-                .IsRequired();
-            
-            builder.Property(e => e.Estado)
-                .IsRequired();
-                
-            builder.Property(e => e.Cep)
-                .IsRequired();
-
             builder.HasOne(e => e.User)
                 .WithOne(u => u.Endereco)
                 .HasForeignKey<Enderecos>(e => e.UserId);

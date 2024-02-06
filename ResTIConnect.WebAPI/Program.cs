@@ -5,7 +5,6 @@ using ResTIConnect.Infra.Data.Context;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddDbContext<ResTIConnectContext>(options => {
     var connectionString = builder.Configuration.GetConnectionString("ResTIConnect");
 

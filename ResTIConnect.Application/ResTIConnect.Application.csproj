@@ -3,6 +3,8 @@
   <ItemGroup>
     <ProjectReference Include="..\ResTIConnect\ResTIConnect.Domain\ResTIConnect.Domain.csproj" />
     <ProjectReference Include="..\ResTIConnect\ResTIConnect.Infra.Data\ResTIConnect.Infra.Data.csproj" />
+    <ProjectReference Include="..\ResTIConnect.Infra.Data\ResTIConnect.Infra.Data.csproj" />
+    <ProjectReference Include="..\ResTIConnect.Domain\ResTIConnect.Domain.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

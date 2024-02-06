@@ -7,7 +7,7 @@ namespace ResTIConnect.Application
 {
     public class NewUserInputModel
     {
-        public string? Name { get; set; }
+        public required string Name { get; set; }
         public int EnderecoId { get; set; }
         public int PerfilId { get; set; }
         public int SistemaId { get; set; }

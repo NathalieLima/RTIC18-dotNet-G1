@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ResTIConnect.Domain.Common;
 
-namespace ResTIConnect.Domain.Entities
+namespace  ResTIConnect.Domain.Entities
 {
     public class Sistemas : BaseEntity
     {

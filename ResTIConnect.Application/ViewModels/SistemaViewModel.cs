@@ -12,7 +12,7 @@ namespace ResTIConnect.Application.ViewModels
         public required string Descricao { get; set; }
         public string? Tipo { get; set; }
 
-        public UserViewModel? User { get; set; }
-        public EventoViewModel? Evento { get; set; }
+        public List<UserViewModel>? Users { get; set; }
+        public List<EventoViewModel>? Eventos { get; set; }
     }
 }
