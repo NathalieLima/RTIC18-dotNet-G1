@@ -8,12 +8,18 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.15">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ResTIConnect.Application\ResTIConnect.Application.csproj" />
     <ProjectReference Include="..\ResTIConnect\ResTIConnect.Infra.Data\ResTIConnect.Infra.Data.csproj" />
+    <ProjectReference Include="..\ResTIConnect.Infra.Data\ResTIConnect.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>
