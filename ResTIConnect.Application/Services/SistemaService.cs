@@ -52,8 +52,21 @@ namespace ResTIConnect.Application.Services
 
         public List<SistemaViewModel> GetByEventoPeriodos(int eventoId, DateTime inicio)
         {
-            // Implemente a lógica para recuperar os sistemas por evento e período, se necessário
-            throw new NotImplementedException();
+            var _eventos = _context.Eventos
+                .FirstOrDefault(e => e.EventoId == eventoId);
+
+            if (_eventos != null && _eventos.Sistemas != null)
+            {
+                var sistemas = _eventos.Sistemas.Select(s => new SistemaViewModel
+                {
+                    SistemaId = s.SistemaId,
+                    Descricao = s.Descricao,
+                    Tipo = s.Tipo
+                }).ToList();
+
+                return sistemas;
+            }
+            return new List<SistemaViewModel>();
         }
 
         public SistemaViewModel GetById(int id)
@@ -90,12 +103,12 @@ namespace ResTIConnect.Application.Services
 
         public List<SistemaViewModel> GetByUserId(int userId)
         {
-            var user = _context.Users
+            var _user = _context.Users
                 .FirstOrDefault(u => u.UserId == userId);
 
-            if (user != null && user.Sistemas != null)
+            if (_user != null && _user.Sistemas != null)
             {
-                var sistemas = user.Sistemas.Select(s => new SistemaViewModel
+                var sistemas = _user.Sistemas.Select(s => new SistemaViewModel
                 {
                     SistemaId = s.SistemaId,
                     Descricao = s.Descricao,
