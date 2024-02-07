@@ -7,6 +7,7 @@ using ResTIConnect.Application.InputModels;
 using ResTIConnect.Application.Services.Interfaces;
 using ResTIConnect.Application.ViewModels;
 using ResTIConnect.Domain.Entities;
+using ResTIConnect.Domain.Exceptions;
 using ResTIConnect.Infra.Data.Context;
 
 namespace ResTIConnect.Application.Services
@@ -81,6 +82,30 @@ namespace ResTIConnect.Application.Services
                .ToList();
 
             return perfis;
+        }
+           
+        private Perfis GetByDbId(int id)
+        {
+            var _perfil = _context.Perfis.Find(id);
+
+            if (_perfil is null)
+                throw new PerfilNotFoundException();
+            
+            return _perfil;
+        }
+        public void Update(int id, NewPerfilInputModel perfil)
+        {
+             var _perfil = GetByDbId(id);
+            _perfil.Descricao = perfil.Descricao;
+            _perfil.Permissoes = perfil.Permissoes;
+
+            _context.Perfis.Update(_perfil);
+            _context.SaveChanges();
+        }
+        public void Delete(int id)
+        {
+            _context.Perfis.Remove(GetByDbId(id));
+            _context.SaveChanges();
         }
     }
 }
