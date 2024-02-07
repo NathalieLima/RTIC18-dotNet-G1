@@ -14,6 +14,11 @@ namespace ResTIConnect.Infra.Data.Configurations
             builder
             .ToTable("User")
             .HasKey(u => u.UserId);
+            
+            builder.HasOne(u => u.Endereco)
+                .WithOne()
+                .HasForeignKey<User>(u => u.EnderecoId)
+                .IsRequired(false);
 
             builder.HasMany(u => u.Perfis)
                 .WithMany(p => p.Users);

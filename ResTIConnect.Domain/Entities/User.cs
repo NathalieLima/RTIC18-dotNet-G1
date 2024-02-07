@@ -9,7 +9,7 @@ public class User : BaseEntity
       public string? Password { get; set; }
       public string? Telefone { get; set; }
 
-
+      public int? EnderecoId { get; set; }
       public Enderecos? Endereco { get; set; }
       public ICollection<Perfis>? Perfis { get; set; }
       public ICollection<Sistemas>? Sistemas { get; set; }

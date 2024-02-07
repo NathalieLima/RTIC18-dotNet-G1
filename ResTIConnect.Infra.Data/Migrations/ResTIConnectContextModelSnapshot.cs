@@ -89,13 +89,7 @@ namespace ResTIConnect.Infra.Data.Migrations
                     b.Property<string>("Pais")
                         .HasColumnType("longtext");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("EnderecoId");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
 
                     b.ToTable("Enderecos", (string)null);
                 });
@@ -224,6 +218,9 @@ namespace ResTIConnect.Infra.Data.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("longtext");
 
+                    b.Property<int?>("EnderecoId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -235,6 +232,9 @@ namespace ResTIConnect.Infra.Data.Migrations
                         .HasColumnType("longtext");
 
                     b.HasKey("UserId");
+
+                    b.HasIndex("EnderecoId")
+                        .IsUnique();
 
                     b.ToTable("User", (string)null);
                 });
@@ -284,15 +284,13 @@ namespace ResTIConnect.Infra.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ResTIConnect.Domain.Entities.Enderecos", b =>
+            modelBuilder.Entity("ResTIConnect.Domain.Entities.User", b =>
                 {
-                    b.HasOne("ResTIConnect.Domain.Entities.User", "User")
-                        .WithOne("Endereco")
-                        .HasForeignKey("ResTIConnect.Domain.Entities.Enderecos", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("ResTIConnect.Domain.Entities.Enderecos", "Endereco")
+                        .WithOne()
+                        .HasForeignKey("ResTIConnect.Domain.Entities.User", "EnderecoId");
 
-                    b.Navigation("User");
+                    b.Navigation("Endereco");
                 });
 
             modelBuilder.Entity("SistemasUser", b =>
@@ -308,11 +306,6 @@ namespace ResTIConnect.Infra.Data.Migrations
                         .HasForeignKey("UsersUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("ResTIConnect.Domain.Entities.User", b =>
-                {
-                    b.Navigation("Endereco");
                 });
 #pragma warning restore 612, 618
         }
