@@ -50,18 +50,15 @@ namespace ResTIConnect.Application.Services
 
         public PerfilViewModel? GetById(int id)
         {
-            var perfil = _context.Perfis.Find(id);
-            if (perfil != null)
+            var perfil = GetByDbId(id);
+
+            var perfilViewModel = new PerfilViewModel
             {
-                var perfilViewModel = new PerfilViewModel
-                {
-                    PerfilId = perfil.PerfilId,
-                    Descricao = perfil.Descricao,
-                    Permissoes = perfil.Permissoes
-                };
-                return perfilViewModel;
-            }
-            return null;
+                PerfilId = perfil.PerfilId,
+                Descricao = perfil.Descricao,
+                Permissoes = perfil.Permissoes
+            };
+            return perfilViewModel;
         }
 
         public List<PerfilViewModel> GetByUserId(int userId)
@@ -78,24 +75,24 @@ namespace ResTIConnect.Application.Services
                        UserId = u.UserId,
                        Name = u.Name,
                    }).ToList()
-                })
+               })
                .ToList();
 
             return perfis;
         }
-           
+
         private Perfis GetByDbId(int id)
         {
             var _perfil = _context.Perfis.Find(id);
 
             if (_perfil is null)
                 throw new PerfilNotFoundException();
-            
+
             return _perfil;
         }
         public void Update(int id, NewPerfilInputModel perfil)
         {
-             var _perfil = GetByDbId(id);
+            var _perfil = GetByDbId(id);
             _perfil.Descricao = perfil.Descricao;
             _perfil.Permissoes = perfil.Permissoes;
 
