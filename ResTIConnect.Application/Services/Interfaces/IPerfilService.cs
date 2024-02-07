@@ -1,8 +1,4 @@
-
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using ResTIConnect.Application.InputModels;
 using ResTIConnect.Application.ViewModels;
 
@@ -10,10 +6,12 @@ namespace ResTIConnect.Application.Services.Interfaces
 {
     public interface IPerfilService
     {
+        List<PerfilViewModel> GetAll();
+        PerfilViewModel? GetById(int id);
+        List<PerfilViewModel> GetByUserId(int userId);
+        int Create(NewPerfilInputModel perfil);
+
         
-        public List<PerfilViewModel> GetAll();
-        public PerfilViewModel? GetById(int id);
-        public List<PerfilViewModel> GetByUserId(int userId);//usuários com um determinado perfil
-        public int Create(NewPerfilInputModel perfil);
+        IEnumerable<PerfilViewModel> GetPerfis();
     }
 }
