@@ -13,8 +13,6 @@ namespace ResTIConnect.Domain.Entities
         public string? Estado { get; set; }
         public string? Cep { get; set; }
         public string? Pais { get; set; }
-        public int UserId { get; set; }
-        public User? User { get; set; }
         
     }
 }
