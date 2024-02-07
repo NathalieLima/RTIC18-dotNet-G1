@@ -82,5 +82,10 @@ namespace ResTIConnect.Application.Services
 
             return perfis;
         }
+
+        public IEnumerable<PerfilViewModel> GetPerfis()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
