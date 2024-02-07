@@ -8,7 +8,6 @@ namespace ResTIConnect.Infra.Data.Context
 {
     public class ResTIConnectContext : DbContext
     {
-        public DbSet<Logs> Logs { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Perfis> Perfis { get; set; }
         public DbSet<Enderecos> Enderecos { get; set; }
