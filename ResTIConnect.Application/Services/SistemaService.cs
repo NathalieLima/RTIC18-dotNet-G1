@@ -16,12 +16,11 @@ namespace ResTIConnect.Application.Services
     public class SistemaService : ISistemaService
     {
         private readonly ResTIConnectContext _context;
-
         public SistemaService(ResTIConnectContext context)
         {
             _context = context;
         }
-
+        
         public int Create(NewSistemaInputModel sistema)
         {
             var _sistema = new Sistemas
@@ -65,23 +64,19 @@ namespace ResTIConnect.Application.Services
             return sistemas;
         }
 
-        public List<SistemaViewModel> GetByEventoPeriodos(int eventoId, DateTime inicio)
+        public List<SistemaViewModel> GetByEventoPeriodos(string tipoEvento, DateTime inicio)
         {
-            var _eventos = _context.Eventos
-                .FirstOrDefault(e => e.EventoId == eventoId);
-
-            if (_eventos != null && _eventos.Sistemas != null)
+            var sistemas = _context.Sistemas
+            .Where(s => s.Eventos.Any(e => e.Tipo == tipoEvento && e.DataHoraOcorrencia>= inicio))
+            .Select(s => new SistemaViewModel
             {
-                var sistemas = _eventos.Sistemas.Select(s => new SistemaViewModel
-                {
-                    SistemaId = s.SistemaId,
-                    Descricao = s.Descricao,
-                    Tipo = s.Tipo
-                }).ToList();
+                SistemaId = s.SistemaId,
+                Descricao = s.Descricao,
+                Tipo = s.Tipo
+            })
+            .ToList();
 
-                return sistemas;
-            }
-            return new List<SistemaViewModel>();
+            return sistemas;
         }
 
         public SistemaViewModel GetById(int id)
@@ -118,23 +113,32 @@ namespace ResTIConnect.Application.Services
 
         }
 
-        public List<SistemaViewModel> GetByUserId(int userId)
+        public List<SistemaViewModel> GetUserById(int userId)
         {
-            var _user = _context.Users
-                .FirstOrDefault(u => u.UserId == userId);
-
-            if (_user != null && _user.Sistemas != null)
-            {
-                var sistemas = _user.Sistemas.Select(s => new SistemaViewModel
+            var sistemas = _context.Sistemas
+                .Where(s => s.Users!.Any(u => u.UserId == userId))
+                .Select(s => new SistemaViewModel
                 {
                     SistemaId = s.SistemaId,
                     Descricao = s.Descricao,
                     Tipo = s.Tipo
-                }).ToList();
+                })
+                .ToList();
 
-                return sistemas;
-            }
-            return new List<SistemaViewModel>();
+            return sistemas;
+        }
+        public void AdicionaSistemaAoEvento(int EventoId, int sistemaId)
+        {
+            var _evento = _context.Eventos.Find(EventoId);
+            if (_evento is null)
+                throw new EventoNotFoundException();
+
+            var _sistema = _context.Sistemas.Find(sistemaId);
+            if (_sistema is null)
+                throw new SistemaNotFoundException();
+
+            _evento.Sistemas!.Add(_sistema);
+            _context.SaveChanges();
         }
     }
 }
