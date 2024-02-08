@@ -27,7 +27,7 @@ namespace ResTIConnect.Application.Services
             var _sistema = new Sistemas
             {
                 Descricao = sistema.Descricao,
-                Tipo = sistema.Tipo
+                Tipo = sistema.Tipo,
             };
 
             _context.Sistemas.Add(_sistema);
@@ -39,11 +39,26 @@ namespace ResTIConnect.Application.Services
         public List<SistemaViewModel> GetAll()
         {
             var sistemas = _context.Sistemas
+                .Include(s => s.Users)
+                .Include(s => s.Eventos)
                 .Select(s => new SistemaViewModel
                 {
                     SistemaId = s.SistemaId,
                     Descricao = s.Descricao,
-                    Tipo = s.Tipo
+                    Tipo = s.Tipo,
+                    Users = s.Users != null ? s.Users.Select(s => new UserViewModel
+                    {
+                        UserId = s.UserId,
+                        Name = s.Name
+                    }).ToList() : null,
+                    Eventos = s.Eventos != null ? s.Eventos.Select(e => new EventoViewModel
+                    {
+                        EventoId = e.EventoId,
+                        Codigo = e.Codigo,
+                        DataHoraOcorrencia = e.DataHoraOcorrencia,
+                        Descricao = e.Descricao,
+                        Tipo = e.Tipo
+                    }).ToList() : null
                 })
                 .ToList();
 
@@ -85,17 +100,19 @@ namespace ResTIConnect.Application.Services
                 SistemaId = _sistema.SistemaId,
                 Descricao = _sistema.Descricao,
                 Tipo = _sistema.Tipo,
-                Users = _sistema.Users!.Select(u => new UserViewModel
-                {
-                    UserId = u.UserId,
-                    Name = u.Name
-                }).ToList(),
-                Eventos = _sistema.Eventos!.Select(e => new EventoViewModel
-                {
-                    EventoId = e.EventoId,
-                    Descricao = e.Descricao
-
-                }).ToList()
+                    Users = _sistema.Users != null ? _sistema.Users.Select(s => new UserViewModel
+                    {
+                        UserId = s.UserId,
+                        Name = s.Name
+                    }).ToList() : null,
+                    Eventos = _sistema.Eventos != null ? _sistema.Eventos.Select(e => new EventoViewModel
+                    {
+                        EventoId = e.EventoId,
+                        Codigo = e.Codigo,
+                        DataHoraOcorrencia = e.DataHoraOcorrencia,
+                        Descricao = e.Descricao,
+                        Tipo = e.Tipo
+                    }).ToList() : null
             };
             return sistemaViewModel;
 
