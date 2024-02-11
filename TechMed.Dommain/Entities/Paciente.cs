@@ -2,7 +2,6 @@ namespace TechMed.Dommain.Entities;
 
 public class Paciente : Pessoa{
    public int PacienteId {get; set;}
-    // public string? Endereco {get; set;}
-    // public string? Telefone {get; set;}
+    public DateTimeOffset DataNascimento {get; set;}
     public ICollection<Atendimento>? Atendimentos {get;}
 }
