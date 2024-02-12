@@ -1,18 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using TechMed.Aplication.InputModel;
 using TechMed.Aplication.ViewModel;
-
-namespace TechMed.Aplication.Services.Interfaces
+namespace TechMed.Application.Services.Interfaces;
+public interface IExameService
 {
-    public interface IExameService
-    {
-        public List<ExameViewModel> GetAll();
-        public ExameViewModel GetById(int id);
-        public List<AtendimentoViewModel> GetByAtendimentoId(int id);
-        public void Create(NewExameInputModel exame);
+    int Create(int AtendimentoId, ExameInputModel exame);
+    void Delete(int id);
+    public List<ExameViewModel> GetAll();
+    public ExameViewModel GetById(int id);
+    void Update(int id, ExameInputModel exame);
 
-    }
 }

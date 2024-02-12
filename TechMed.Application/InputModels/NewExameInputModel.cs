@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 
 namespace TechMed.Aplication.InputModel
 {
-    public class NewExameInputModel
+    public class ExameInputModel
     {
         public string Nome { get; set; } = null!;
-        public DateTime DataHora { get; set; }
-        public int AdendimentoId { get; set; }
+        public DateTimeOffset DataHora {get;set;}
+        public decimal Valor;
+        public string? Local;
     }
 }

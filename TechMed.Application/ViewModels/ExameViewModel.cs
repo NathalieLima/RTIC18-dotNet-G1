@@ -8,8 +8,10 @@ namespace TechMed.Aplication.ViewModel
     public class ExameViewModel
     {
         public int ExameId { get; set; }
-        public string? Nome { get; set; }
+        public string? ExameNome { get; set; }
         public DateTimeOffset DataHora { get; set; }
-        public AtendimentoViewModel Atendimento { get; set; } = null!;
+        public decimal Valor { get; set; }
+        public string? Local { get; set; }
+        public string? ResultadoDescricao { get; set; }
     }
 }

@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace TechMed.Aplication.InputModel
 {
-    public class NewMedicoInputModel
+    public class MedicoInputModel
     {
         public string? Nome { get; set; }
+        public string? CRM {get;set;}
     }
 }
