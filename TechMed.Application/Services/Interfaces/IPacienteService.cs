@@ -11,8 +11,8 @@ namespace TechMed.Aplication.Services.Interfaces
       
       public List<PacienteViewModel> GetAll();
       public PacienteViewModel? GetById(int id);
-      public int Create(NewPacienteInputModel paciente);
-      public void Update(int id, NewPacienteInputModel paciente);
+      public int Create(PacienteInputModel paciente);
+      public void Update(int id, PacienteInputModel paciente);
       public void Delete(int id);
     }
 }

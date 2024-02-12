@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using TechMed.Core.Entities;
+
+using TechMed.Dommain.Entities;
 
 namespace TechMed.Infrastructure.Configurations;
 
