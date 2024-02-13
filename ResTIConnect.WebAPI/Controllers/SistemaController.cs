@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using ResTIConnect.Application.InputModels;
 using ResTIConnect.Application.Services.Interfaces;
 using ResTIConnect.Application.ViewModels;
+using ResTIConnect.Domain.Exceptions;
 
 namespace ResTIConnect.WebAPI.Controllers
 {
@@ -46,5 +47,38 @@ namespace ResTIConnect.WebAPI.Controllers
             var sistemas = _sistemaService.GetUserById(userId);
             return Ok(sistemas);
         }
+        
+        [HttpGet("system/event/{type}/from/{date}")]//  – sistemas onde ocorreram um determinado evento a partir de uma data até a atual 
+        public IActionResult GetSistemasByEventoTipoByData(String tipo, DateTime dataInicio)
+        {
+
+            var sistemas = _sistemaService.GetByEventoPeriodos(tipo, dataInicio);
+            return Ok(sistemas);
+             
+        }
+
+         [HttpPut("evento/{eventoId}/sistema/{sistemaId}")]
+        public IActionResult AdicionaSistemaAoEvento(int eventoId, int sistemaId)
+        {
+            try
+            {
+                _sistemaService.AdicionaSistemaAoEvento(eventoId, sistemaId);
+                return Ok("Evento adicionado ao sistema com sucesso");
+            }
+            catch (EventoNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (SistemaNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+           
+        }
+
     }
 }

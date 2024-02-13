@@ -61,6 +61,47 @@ namespace ResTIConnect.WebAPI.Controllers
             return Ok();
         }
         
+        [HttpGet("users/perfil/{id}")]//  – usuários com um determinado perfil 
+        public IActionResult GetUsersByPerfilId(int perfilId)
+        {
+             var user = _userService.GetByPerfilId(perfilId);
+            return Ok(user);
+        }
+        [HttpGet("users/sistema/{id}")]//  – usuários com um determinado sistema 
+        public IActionResult GetUsersBySistemaId(int sistemaId)
+        {
+            var user = _userService.GetBySistemaId(sistemaId);
+            return Ok(user);
+        }
+
+        [HttpGet("users/address/{uf}")]//  – usuários de um determinado estado 
+        public IActionResult GetUsersByAddressUF(string uf)
+        {
+            var user = _userService.GetByEnderecoUF(uf);
+            return Ok(user);
+        }
+        [HttpPut("user/{userId}/sistema/{sistemaId}")]
+        public IActionResult AdicionaSistemaAoUser(int userId, int sistemaId)
+        {
+            try
+            {
+                _userService.AdicionaSistemaAoUser(userId, sistemaId);
+                return Ok("Sistema adicionado ao usuário com sucesso");
+            }
+            catch (UserNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (SistemaNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+           
+        }
         [HttpPut("user/{userId}/perfil/{perfilId}")]
         public IActionResult AdicionaPerfilAoUser(int userId, int perfilId)
         {
