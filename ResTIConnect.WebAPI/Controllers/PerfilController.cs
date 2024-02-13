@@ -9,6 +9,9 @@ using ResTIConnect.Application.ViewModels;
 
 namespace ResTIConnect.WebAPI.Controllers
 {
+    
+    [ApiController]
+    [Route("/api/v0.1/")]
     public class PerfilController : ControllerBase
     {
         private readonly IPerfilService _perfilService;
