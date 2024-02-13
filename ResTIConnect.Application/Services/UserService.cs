@@ -16,11 +16,15 @@ namespace ResTIConnect.Application.Services
 {
     public class UserService : IUserService
     {
+
         private readonly ResTIConnectContext _context;
         public UserService(ResTIConnectContext context)
         {
             _context = context;
         }
+
+
+
         public List<UserViewModel> GetAll()
         {
             var users = _context.Users
@@ -66,6 +70,7 @@ namespace ResTIConnect.Application.Services
             var _user = new User
             {
                 Name = user.Name,
+                EnderecoId = user.EnderecoId,
                 EnderecoId = user.EnderecoId 
             };
             
@@ -150,6 +155,7 @@ namespace ResTIConnect.Application.Services
             return users;
         }
 
+
         private User GetByDbId(int id)
         {
             var _user = _context.Users.Find(id);
@@ -183,19 +189,49 @@ namespace ResTIConnect.Application.Services
             
         }
 
-        public void AdicionaPerfilAoUser(int userId, int perfilId)
+
+        public List<UserViewModel> GetByEnderecoUF(string uf)
         {
             
-            var _user = GetByDbId(userId);
-            if (_user is null)
-                throw new UserNotFoundException();
+           var users = _context.Users
+            .Where(u => u.Endereco!.Estado == uf)
+            .Select(u => new UserViewModel
+            {
+                UserId = u.UserId,
+                Name = u.Name,
+            })
+            .ToList();
 
-            var _perfil = _context.Perfis.Find(perfilId);
-            if (_perfil is null)
-                throw new SistemaNotFoundException();
+            return users;
+        }
 
-            _user.Perfis!.Add(_perfil);
-            _context.SaveChanges();
+        
+        public List<UserViewModel> GetBySistemaId(int id)
+        {
+           var users = _context.Users
+            .Where(u => u.Sistemas!.Any(s => s.SistemaId == id))
+            .Select(u => new UserViewModel
+            {
+                UserId = u.UserId,
+                Name = u.Name,
+            })
+            .ToList();
+
+            return users;
+        }
+        
+         public List<UserViewModel> GetByPerfilId(int perfilId)
+        {
+           var users = _context.Users
+            .Where(u => u.Perfis!.Any(s => s.PerfilId == perfilId))
+            .Select(u => new UserViewModel
+            {
+                UserId = u.UserId,
+                Name = u.Name,
+            })
+            .ToList();
+
+            return users;
         }
 
         public List<UserViewModel> GetByEnderecoUF(string uf)
@@ -212,5 +248,21 @@ namespace ResTIConnect.Application.Services
 
             return users;
         }
+
+        public void AdicionaPerfilAoUser(int userId, int perfilId)
+        {
+            
+            var _user = GetByDbId(userId);
+            if (_user is null)
+                throw new UserNotFoundException();
+
+            var _perfil = _context.Perfis.Find(perfilId);
+            if (_perfil is null)
+                throw new SistemaNotFoundException();
+
+            _user.Perfis!.Add(_perfil);
+            _context.SaveChanges();
+        }
+
     }
 }
