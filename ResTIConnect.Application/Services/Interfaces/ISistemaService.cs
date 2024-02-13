@@ -16,5 +16,8 @@ namespace ResTIConnect.Application.Services.Interfaces
         public List<SistemaViewModel> GetUserById(int userId);//sistemas com alguma relação com um determinado usuário
         public List<SistemaViewModel> GetByEventoPeriodos(string tipoEvento, DateTime inicio);//sistemas onde ocorreram um determinado evento a partir de uma data até a atual  
         public int Create(NewSistemaInputModel sistema);
+        
+        public void AdicionaSistemaAoEvento(int EventoId, int sistemaId);
+
     }
 }
