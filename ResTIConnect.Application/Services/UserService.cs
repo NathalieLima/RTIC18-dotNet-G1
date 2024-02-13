@@ -70,8 +70,7 @@ namespace ResTIConnect.Application.Services
             var _user = new User
             {
                 Name = user.Name,
-                EnderecoId = user.EnderecoId,
-                EnderecoId = user.EnderecoId 
+                EnderecoId = user.EnderecoId
             };
             
             _context.Users.Add(_user);
@@ -189,50 +188,6 @@ namespace ResTIConnect.Application.Services
             
         }
 
-
-        public List<UserViewModel> GetByEnderecoUF(string uf)
-        {
-            
-           var users = _context.Users
-            .Where(u => u.Endereco!.Estado == uf)
-            .Select(u => new UserViewModel
-            {
-                UserId = u.UserId,
-                Name = u.Name,
-            })
-            .ToList();
-
-            return users;
-        }
-
-        
-        public List<UserViewModel> GetBySistemaId(int id)
-        {
-           var users = _context.Users
-            .Where(u => u.Sistemas!.Any(s => s.SistemaId == id))
-            .Select(u => new UserViewModel
-            {
-                UserId = u.UserId,
-                Name = u.Name,
-            })
-            .ToList();
-
-            return users;
-        }
-        
-         public List<UserViewModel> GetByPerfilId(int perfilId)
-        {
-           var users = _context.Users
-            .Where(u => u.Perfis!.Any(s => s.PerfilId == perfilId))
-            .Select(u => new UserViewModel
-            {
-                UserId = u.UserId,
-                Name = u.Name,
-            })
-            .ToList();
-
-            return users;
-        }
 
         public List<UserViewModel> GetByEnderecoUF(string uf)
         {

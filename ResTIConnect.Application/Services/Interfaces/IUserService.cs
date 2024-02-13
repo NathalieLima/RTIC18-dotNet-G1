@@ -22,6 +22,6 @@ namespace ResTIConnect.Application.Services.Interfaces
       public void AdicionaPerfilAoUser(int userId, int sistemaId);
       public void Update(int id, NewUserInputModel user);
       public void Delete(int id);
-      public void AdicionaPerfilAoUser(int userId, int sistemaId);
+    
     }
 }
