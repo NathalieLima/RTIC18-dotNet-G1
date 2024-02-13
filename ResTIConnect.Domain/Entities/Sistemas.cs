@@ -24,8 +24,8 @@ namespace  ResTIConnect.Domain.Entities
 
         public string? Status { get; set; }
 
-        public ICollection<User>? Users { get; set; }
+        public ICollection<User>? Users { get; set; } = new List<User>();
 
-        public ICollection<Eventos>? Eventos { get; set; }
+        public ICollection<Eventos>? Eventos { get; set; } = new List<Eventos>();
     }
 }
