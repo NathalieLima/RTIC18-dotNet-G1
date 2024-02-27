@@ -13,6 +13,7 @@ builder.Services.AddScoped<IEnderecoService, EnderecoService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IEventoService, EventoService>();
 builder.Services.AddScoped<ISistemaService, SistemaService>();
+builder.Services.AddScoped<ILoginService, LoginService>();
 
 builder.Services.AddDbContext<ResTIConnectContext>(options => {
     var connectionString = builder.Configuration.GetConnectionString("ResTIConnect");

@@ -20,7 +20,7 @@ namespace ResTIConnect.Application.Services.Security
          }
       }
 
-      public static bool VerifyPassword(zstring password, string hash)
+      public static bool VerifyPassword(string password, string hash)
       {
          return HashPassword(password) == hash;
       }

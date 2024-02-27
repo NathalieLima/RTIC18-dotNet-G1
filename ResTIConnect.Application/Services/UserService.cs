@@ -10,6 +10,7 @@ using ResTIConnect.Infra.Data.Context;
 using ResTIConnect.Domain.Entities;
 using ResTIConnect.Domain.Exceptions;
 using ResTIConnect.Application.InputModels;
+using ResTIConnect.Application.Services.Security;
 
 
 namespace ResTIConnect.Application.Services
@@ -178,6 +179,15 @@ namespace ResTIConnect.Application.Services
             _context.SaveChanges();
         }
 
+        public bool AutenticateUser(string email, string password)
+        {
+            var _user = _context.Users.FirstOrDefault(u => u.Email == email && u.Password == Utils.HashPassword(password));
+
+            if (_user is null)
+                return false;
+
+            return (_user.Email == email);
+        }
         public void AdicionaSistemaAoUser(int userId, int sistemaId)
         {
             var _user = GetByDbId(userId);
