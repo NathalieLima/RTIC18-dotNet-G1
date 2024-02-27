@@ -67,12 +67,15 @@ namespace ResTIConnect.Application.Services
 
         public int Create(NewUserInputModel user)
         {
+             var passwordHash = Utils.HashPassword(user.Password);
             var _user = new User
             {
                 Name = user.Name,
-                EnderecoId = user.EnderecoId
+                Email = user.Email,
+                Password = passwordHash,
+                EnderecoId = user.EnderecoId,
             };
-            
+
             _context.Users.Add(_user);
 
             _context.SaveChanges();
@@ -166,9 +169,11 @@ namespace ResTIConnect.Application.Services
         }
         public void Update(int id, NewUserInputModel user)
         {
+            var passwordHash = Utils.HashPassword(user.Password);
             var _user = GetByDbId(id);
             _user.Name = user.Name!;
             _user.EnderecoId = user.EnderecoId;
+            _user.Password = passwordHash;
             _context.Users.Update(_user);
             _context.SaveChanges();
         }
