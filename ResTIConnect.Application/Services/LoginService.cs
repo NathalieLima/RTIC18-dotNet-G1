@@ -19,9 +19,9 @@ public class LoginService : ILoginService
         
         string _token = ""; //token inicialmente vazio
 
-        if (_userService.AutenticateUser(login.Email, login.Password))
-        {
-            _token = _authService.GenerateJwtToken(login.Email, login.Email); //Gera o token e atribui o valor dele
+        if (_userService.AutenticateUser(login.Email, login.Password)){
+                bool isAdmin = _userService.IsUserAdmin(login.Email);
+                _token = _authService.GenerateJwtToken(login.Email, isAdmin ? "Admin" : "User");
         }
         if (_token != "")//se tudo der certo retorna um novo login com o token
         {

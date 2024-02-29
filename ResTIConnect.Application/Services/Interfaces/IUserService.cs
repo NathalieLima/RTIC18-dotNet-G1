@@ -17,8 +17,9 @@ namespace ResTIConnect.Application.Services.Interfaces
     public List<UserViewModel> GetBySistemaId(int sistemaId);
     public List<UserViewModel> GetByPerfilId(int perfilId);
     public int Create(NewUserInputModel user);
+    public bool IsUserAdmin(string email);
     public bool AutenticateUser(string email, string password);
-      public void AdicionaSistemaAoUser(int userId, int sistemaId);
+    public void AdicionaSistemaAoUser(int userId, int sistemaId);
     public void AdicionaPerfilAoUser(int userId, int sistemaId);
     public void Update(int id, NewUserInputModel user);
     public void Delete(int id);

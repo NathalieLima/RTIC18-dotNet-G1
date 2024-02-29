@@ -20,23 +20,23 @@ namespace ResTIConnect.WebAPI.Controllers
         public EventosController(IEventoService eventoService) => _eventoService = eventoService;
 
         [HttpGet("eventos")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult Get()
         {
 
             return Ok(Eventos);
         }
+        
         [HttpGet("evento/{id}")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult GetById(int id)
         {
             var evento = _eventoService.GetById(id);
             return Ok(evento);
         }
         
-
         [HttpPost("evento")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult Post([FromBody] NewEventoInputModel evento)
         {
             _eventoService.Create(evento);

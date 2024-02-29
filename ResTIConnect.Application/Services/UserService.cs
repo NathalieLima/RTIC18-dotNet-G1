@@ -24,8 +24,6 @@ namespace ResTIConnect.Application.Services
             _context = context;
         }
 
-
-
         public List<UserViewModel> GetAll()
         {
             var users = _context.Users
@@ -158,7 +156,6 @@ namespace ResTIConnect.Application.Services
             return users;
         }
 
-
         private User GetByDbId(int id)
         {
             var _user = _context.Users.Find(id);
@@ -168,6 +165,7 @@ namespace ResTIConnect.Application.Services
 
             return _user;
         }
+        
         public void Update(int id, NewUserInputModel user)
         {
             var passwordHash = Utils.HashPassword(user.Password);
@@ -188,6 +186,7 @@ namespace ResTIConnect.Application.Services
 
             return (_user.Email == email);
         }
+        
         public void AdicionaSistemaAoUser(int userId, int sistemaId)
         {
             var _user = GetByDbId(userId);
@@ -202,8 +201,7 @@ namespace ResTIConnect.Application.Services
             _context.SaveChanges();
             
         }
-
-
+        
         public List<UserViewModel> GetByEnderecoUF(string uf)
         {
             
@@ -234,5 +232,17 @@ namespace ResTIConnect.Application.Services
             _context.SaveChanges();
         }
 
+        public bool IsUserAdmin(string email)
+        {
+            var user = _context.Users.Include(u => u.Perfis)
+                                      .FirstOrDefault(u => u.Email == email);
+
+            if (user != null)
+            {
+                return user.Perfis!.Any(p => p.Descricao.ToLower() == "admin");
+            }
+
+            return false;
+        }
     }
 }

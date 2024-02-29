@@ -21,23 +21,23 @@ namespace ResTIConnect.WebAPI.Controllers
         public SistemaController(ISistemaService sistemaService) => _sistemaService = sistemaService;
 
         [HttpGet("sistemas")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult Get()
         {
 
             return Ok(Sistemas);
         }
+        
         [HttpGet("sistema/{id}")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult GetById(int id)
         {
             var sistema = _sistemaService.GetById(id);
             return Ok(sistema);
         }
         
-
         [HttpPost("sistema")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult Post([FromBody] NewSistemaInputModel sistema)
         {
             _sistemaService.Create(sistema);
@@ -45,8 +45,9 @@ namespace ResTIConnect.WebAPI.Controllers
             return CreatedAtAction(nameof(Get), sistema);
 
         }
+        
         [HttpGet("system/user/{id}")]// – sistemas com alguma relação com um determinado usuário 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult GetSistemasByUserId(int userId)
         {
             var sistemas = _sistemaService.GetUserById(userId);
@@ -54,6 +55,7 @@ namespace ResTIConnect.WebAPI.Controllers
         }
         
         [HttpGet("system/event/{type}/from/{date}")]//  – sistemas onde ocorreram um determinado evento a partir de uma data até a atual 
+        [Authorize(Roles = "Admin")]
         public IActionResult GetSistemasByEventoTipoByData(String tipo, DateTime dataInicio)
         {
 
@@ -63,6 +65,7 @@ namespace ResTIConnect.WebAPI.Controllers
         }
 
         [HttpPut("evento/{eventoId}/sistema/{sistemaId}")]
+        [Authorize(Roles = "Admin")]
         public IActionResult AdicionaSistemaAoEvento(int eventoId, int sistemaId)
         {
             try
