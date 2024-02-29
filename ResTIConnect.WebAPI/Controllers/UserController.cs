@@ -7,6 +7,7 @@ using ResTIConnect.Application;
 using ResTIConnect.Application.Services.Interfaces;
 using ResTIConnect.Application.ViewModels;
 using ResTIConnect.Domain.Exceptions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ResTIConnect.WebAPI.Controllers
 {
@@ -21,12 +22,14 @@ namespace ResTIConnect.WebAPI.Controllers
 
 
         [HttpGet("users")]
+        [Authorize]
         public IActionResult Get()
         {
             return Ok(Users);
         }
 
         [HttpGet("user/{id}")]
+        [Authorize]
         public IActionResult GetById(int id)
         {
             var user = _userService.GetById(id);
@@ -35,6 +38,7 @@ namespace ResTIConnect.WebAPI.Controllers
 
 
         [HttpPost("user")]
+        [Authorize]
         public IActionResult Post([FromBody] NewUserInputModel user)
         {
             _userService.Create(user);
@@ -44,6 +48,7 @@ namespace ResTIConnect.WebAPI.Controllers
         }
 
         [HttpPut("user/{id}")]
+        [Authorize]
         public IActionResult Put(int id, [FromBody] NewUserInputModel user)
         {
             if (_userService.GetById(id) == null)
@@ -53,6 +58,7 @@ namespace ResTIConnect.WebAPI.Controllers
         }
 
         [HttpDelete("user/{id}")]
+        [Authorize]
         public IActionResult Delete(int id)
         {
             if (_userService.GetById(id) == null)
@@ -62,12 +68,15 @@ namespace ResTIConnect.WebAPI.Controllers
         }
         
         [HttpGet("users/perfil/{id}")]//  – usuários com um determinado perfil 
+        [Authorize]
         public IActionResult GetUsersByPerfilId(int perfilId)
         {
              var user = _userService.GetByPerfilId(perfilId);
             return Ok(user);
         }
+
         [HttpGet("users/sistema/{id}")]//  – usuários com um determinado sistema 
+        [Authorize]
         public IActionResult GetUsersBySistemaId(int sistemaId)
         {
             var user = _userService.GetBySistemaId(sistemaId);
@@ -75,12 +84,15 @@ namespace ResTIConnect.WebAPI.Controllers
         }
 
         [HttpGet("users/address/{uf}")]//  – usuários de um determinado estado 
+        [Authorize]
         public IActionResult GetUsersByAddressUF(string uf)
         {
             var user = _userService.GetByEnderecoUF(uf);
             return Ok(user);
         }
+        
         [HttpPut("user/{userId}/sistema/{sistemaId}")]
+        [Authorize]
         public IActionResult AdicionaSistemaAoUser(int userId, int sistemaId)
         {
             try
@@ -102,7 +114,9 @@ namespace ResTIConnect.WebAPI.Controllers
             }
            
         }
+        
         [HttpPut("user/{userId}/perfil/{perfilId}")]
+        [Authorize]
         public IActionResult AdicionaPerfilAoUser(int userId, int perfilId)
         {
             try

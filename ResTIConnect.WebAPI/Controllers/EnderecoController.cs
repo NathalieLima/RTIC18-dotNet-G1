@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using ResTIConnect.Application.InputModels;
 using ResTIConnect.Application.Services.Interfaces;
 using ResTIConnect.Application.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ResTIConnect.WebAPI.Controllers
 {
@@ -22,12 +23,15 @@ namespace ResTIConnect.WebAPI.Controllers
 
 
         [HttpGet("enderecos")]
+        [Authorize]
+
         public IActionResult Get()
         {
             return Ok(Enderecos);
         }
 
         [HttpGet("endereco/{id}")]
+        [Authorize]
         public IActionResult GetById(int id)
         {
             var endereco = _enderecoService.GetById(id);
@@ -36,6 +40,7 @@ namespace ResTIConnect.WebAPI.Controllers
 
 
         [HttpPost("endereco")]
+        [Authorize]
         public IActionResult Post([FromBody] NewEnderecoInputModel endereco)
         {
             _enderecoService.Create(endereco);
@@ -45,6 +50,7 @@ namespace ResTIConnect.WebAPI.Controllers
         }
 
         [HttpPut("endereco/{id}")]
+        [Authorize]
         public IActionResult Put(int id, [FromBody] NewEnderecoInputModel endereco)
         {
             if (_enderecoService.GetById(id) == null)
@@ -54,6 +60,7 @@ namespace ResTIConnect.WebAPI.Controllers
         }
 
         [HttpDelete("endereco/{id}")]
+        [Authorize]
         public IActionResult Delete(int id)
         {
             if (_enderecoService.GetById(id) == null)
